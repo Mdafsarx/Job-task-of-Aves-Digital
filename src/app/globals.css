@@ -19,3 +19,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.link-shadow {
+  /* box-shadow: 0px 0px 3px 0px #3DD598, 0px 0px 3px 0px #3DD598; */
+}
