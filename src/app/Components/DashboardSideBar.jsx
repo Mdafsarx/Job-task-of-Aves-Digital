@@ -20,7 +20,7 @@ export default function DashboardSideBar() {
 
 
     return (
-        <div className={`${sideBar ? 'w-64' : ''} bg-[#F2F6F9CC] min-h-screen border-r *:text-black flex flex-col justify-between`}>
+        <div className={`${sideBar ? 'w-64' : ''}  bg-[#F2F6F9] min-h-screen border-r *:text-black hidden md:flex flex-col justify-between`}>
 
             <div>
                 {/* logo */}

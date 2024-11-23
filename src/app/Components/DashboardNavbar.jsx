@@ -4,6 +4,7 @@ import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
 import { IoNotificationsOutline, IoPersonOutline, IoSunny } from "react-icons/io5";
 import { BsSunFill } from "react-icons/bs";
 import { Context } from "./Provider/Provider";
+import DashboardDrawer from "./DashboardDrawer";
 
 
 export default function DashboardNavbar() {
@@ -13,16 +14,19 @@ export default function DashboardNavbar() {
 
 
     return (
-        <nav className="w-full h-14 px-5 border-b flex items-center justify-between *:text-black">
+        <nav className="w-full h-14 px-5 border-b flex items-center justify-between *:text-black bg-[#F2F6F9] md:bg-white ">
+
             {
                 sideBar
-                    ? <GoSidebarExpand className="text-2xl cursor-pointer hover:text-[#3DD598]" onClick={() => {
+                    ? <GoSidebarExpand className="text-2xl cursor-pointer hover:text-[#3DD598] hidden md:block" onClick={() => {
                         setSideBar(false)
                     }} />
-                    : <GoSidebarCollapse className="text-2xl cursor-pointer hover:text-[#3DD598]" onClick={() => {
+                    : <GoSidebarCollapse className="text-2xl cursor-pointer hover:text-[#3DD598] hidden md:block" onClick={() => {
                         setSideBar(true)
                     }} />
             }
+
+            <DashboardDrawer />
 
             <div className="flex items-center gap-x-3">
 
@@ -39,6 +43,7 @@ export default function DashboardNavbar() {
                 </div>
 
             </div>
+
         </nav>
     )
 }
