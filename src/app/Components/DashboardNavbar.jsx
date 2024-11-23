@@ -1,12 +1,28 @@
-import { GoSidebarExpand } from "react-icons/go";
+'use client'
+import React from "react";
+import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
 import { IoNotificationsOutline, IoPersonOutline, IoSunny } from "react-icons/io5";
 import { BsSunFill } from "react-icons/bs";
+import { Context } from "./Provider/Provider";
 
 
 export default function DashboardNavbar() {
+
+    const { sideBar, setSideBar } = React.useContext(Context);
+
+
+
     return (
         <nav className="w-full h-14 px-5 border-b flex items-center justify-between *:text-black">
-            <GoSidebarExpand className="text-2xl" />
+            {
+                sideBar
+                    ? <GoSidebarExpand className="text-2xl cursor-pointer hover:text-[#3DD598]" onClick={() => {
+                        setSideBar(false)
+                    }} />
+                    : <GoSidebarCollapse className="text-2xl cursor-pointer hover:text-[#3DD598]" onClick={() => {
+                        setSideBar(true)
+                    }} />
+            }
 
             <div className="flex items-center gap-x-3">
 
