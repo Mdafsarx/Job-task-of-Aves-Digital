@@ -14,36 +14,37 @@ export default function DashboardNavbar() {
 
 
     return (
-        <nav className="w-full h-14 px-5 border-b flex items-center justify-between *:text-black bg-[#F2F6F9] md:bg-white ">
+        <div className={`fixed top-0 ${sideBar ? 'w-[calc(100vw-240px)] left-60' : 'w-[calc(100vw-72px)] left-[72px]'}`}>
+            <nav className="w-full h-14 px-5 border-b flex items-center justify-between *:text-black bg-[#F2F6F9] md:bg-white ">
+                {
+                    sideBar
+                        ? <GoSidebarExpand className="text-2xl cursor-pointer hover:text-[#3DD598] hidden md:block" onClick={() => {
+                            setSideBar(false)
+                        }} />
+                        : <GoSidebarCollapse className="text-2xl cursor-pointer hover:text-[#3DD598] hidden md:block" onClick={() => {
+                            setSideBar(true)
+                        }} />
+                }
 
-            {
-                sideBar
-                    ? <GoSidebarExpand className="text-2xl cursor-pointer hover:text-[#3DD598] hidden md:block" onClick={() => {
-                        setSideBar(false)
-                    }} />
-                    : <GoSidebarCollapse className="text-2xl cursor-pointer hover:text-[#3DD598] hidden md:block" onClick={() => {
-                        setSideBar(true)
-                    }} />
-            }
+                <DashboardDrawer />
 
-            <DashboardDrawer />
+                <div className="flex items-center gap-x-3">
 
-            <div className="flex items-center gap-x-3">
+                    <div className="border-2 border-[#3DD598] p-1.5 rounded-full">
+                        <IoNotificationsOutline className="text-xl" />
+                    </div>
 
-                <div className="border-2 border-[#3DD598] p-1.5 rounded-full">
-                    <IoNotificationsOutline className="text-xl" />
+                    <div className="border-2 border-[#3DD598] p-1.5 rounded-full">
+                        <BsSunFill className="text-xl" />
+                    </div>
+
+                    <div className="border-2 border-[#3DD598] p-1.5 rounded-full">
+                        <IoPersonOutline className="text-xl" />
+                    </div>
+
                 </div>
 
-                <div className="border-2 border-[#3DD598] p-1.5 rounded-full">
-                    <BsSunFill className="text-xl" />
-                </div>
-
-                <div className="border-2 border-[#3DD598] p-1.5 rounded-full">
-                    <IoPersonOutline className="text-xl" />
-                </div>
-
-            </div>
-
-        </nav>
+            </nav>
+        </div>
     )
 }

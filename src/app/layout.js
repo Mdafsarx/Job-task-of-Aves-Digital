@@ -3,6 +3,7 @@ import "./globals.css";
 import DashboardNavbar from "./Components/DashboardNavbar";
 import DashboardSideBar from "./Components/DashboardSideBar";
 import Provider from "./Components/Provider/Provider";
+import Main from "./Components/Main";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,13 +24,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased `}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F3F2ED99`}>
         <Provider>
+
           <div className="flex items-start">
             <DashboardSideBar />
             <DashboardNavbar />
           </div>
-          {children}
+
+          <Main displayContent={children} />
+
         </Provider>
       </body>
     </html>

@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div>
-     
+    <div className="text-black text-5xl">
+     afsar
     </div>
   );
 }
