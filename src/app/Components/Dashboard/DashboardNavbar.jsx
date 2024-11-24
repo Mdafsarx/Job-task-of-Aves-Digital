@@ -3,8 +3,8 @@ import React from "react";
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
 import { IoNotificationsOutline, IoPersonOutline, IoSunny } from "react-icons/io5";
 import { BsSunFill } from "react-icons/bs";
-import { Context } from "./Provider/Provider";
-import DashboardDrawer from "./DashboardDrawer";
+import { Context } from "../Provider/Provider";
+import DashboardDrawer from "../DashboardDrawer";
 
 
 export default function DashboardNavbar() {

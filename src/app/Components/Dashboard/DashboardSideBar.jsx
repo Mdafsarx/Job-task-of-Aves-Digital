@@ -9,7 +9,7 @@ import { IoCalendarNumberOutline } from "react-icons/io5";
 import { TbReportSearch } from "react-icons/tb";
 import { MdHelpOutline } from "react-icons/md";
 import { usePathname } from 'next/navigation';
-import { Context } from './Provider/Provider';
+import { Context } from '../Provider/Provider';
 
 
 
