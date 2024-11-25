@@ -2,9 +2,6 @@
 import { LineChart, PieChart } from "@mui/x-charts";
 import SummaryCard from "./Components/Dashboard/SummaryCard";
 import PropertyData from "./Components/Dashboard/PropertyData";
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DateCalendar, LocalizationProvider } from "@mui/x-date-pickers";
-
 export default function Home() {
 
 
@@ -61,7 +58,7 @@ export default function Home() {
           <div className="text-center bg-[#F2F6F9] p-2 rounded-t-md border">
             <h3 className="text-lg font-bold">Property Status</h3>
           </div>
-          <div className="border border-t-0 rounded-b-md h-[17.9rem] flex items-center justify-center">
+          <div className="border border-t-0 rounded-b-md h-[17.95rem] flex items-center justify-center">
             <LineChart
               xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
               series={[
@@ -78,6 +75,8 @@ export default function Home() {
 
 
       </div>
+
+
 
     </div>
   );

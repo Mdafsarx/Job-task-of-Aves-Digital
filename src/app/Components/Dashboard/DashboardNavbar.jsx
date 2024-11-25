@@ -15,7 +15,7 @@ export default function DashboardNavbar() {
 
     return (
         <div className={`fixed top-0 ${sideBar ? 'w-[calc(100vw-240px)] left-60' : 'w-[calc(100vw-72px)] left-[72px]'}`}>
-            <nav className="w-full h-14 px-5 border-b flex items-center justify-between *:text-black bg-[#F2F6F9] md:bg-transparent">
+            <nav className="w-full h-14 pl-5 pr-10 border-b flex items-center justify-between *:text-black bg-[#F2F6F9] md:bg-transparent">
                 {
                     sideBar
                         ? <GoSidebarExpand className="text-2xl cursor-pointer hover:text-[#3DD598] hidden md:block" onClick={() => {
