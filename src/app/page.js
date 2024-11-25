@@ -12,10 +12,10 @@ export default function Home() {
       <div className="flex flex-col xl:flex-row gap-6">
         {/* summery cards */}
         <div className="xl:w-[60%] grid md:grid-cols-2 gap-4">
-          <SummaryCard title={'Total Properties'} number={550} percent={70} color={'bg-[#F9D9DACC]'} progressColor={'text-[#fcbdbf]'} />
-          <SummaryCard title={'Available Properties'} number={500} percent={80} color={'bg-[#82E4C8CC]'} progressColor={'text-[#6cffd5CC]'} />
-          <SummaryCard title={'Rented Properties'} number={50} percent={40} color={'bg-[#FFEDCDCC]'} progressColor={'text-[#ffdca0]'} />
-          <SummaryCard title={'Top Properties'} number={400} percent={85} color={'bg-[#D8DBECCC]'} progressColor={'text-[#bfc9ff]'} />
+          <SummaryCard title={'Total Properties'} number={550} percent={70} color={'bg-[#F9D9DACC]'} progressColor={'text-[#fcbdbf]'} SportLightColor={'#fcbdbf'} hoverBg={'hover:bg-[#F9D9DA99]'}/>
+          <SummaryCard title={'Available Properties'} number={500} percent={80} color={'bg-[#82E4C8CC]'} progressColor={'text-[#6cffd5CC]'} SportLightColor={'#6cffd5'} hoverBg={'hover:bg-[#82E4C8CC]'}/>
+          <SummaryCard title={'Rented Properties'} number={50} percent={40} color={'bg-[#FFEDCDCC]'} progressColor={'text-[#ffdca0]'} SportLightColor={'#ffdca0'} hoverBg={'hover:bg-[#FFEDCD99]'}/>
+          <SummaryCard title={'Top Properties'} number={400} percent={85} color={'bg-[#D8DBECCC]'} progressColor={'text-[#bfc9ff]'} SportLightColor={'#bfc9ff'} hoverBg={'hover:bg-[#D8DBEC99]'}/>
         </div>
         {/* rent status with pie chart */}
         <div className="xl:w-[40%]">
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
 
       </div>
-      
+
     </div>
   );
 }
