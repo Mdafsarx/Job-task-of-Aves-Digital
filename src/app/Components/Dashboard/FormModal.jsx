@@ -1,11 +1,9 @@
 'use client'
-
-import { useRouter } from "next/navigation";
-
+import React from "react";
+import { Context } from "../Provider/Provider";
 
 export default function FormModal() {
-    const router = useRouter()
-
+    const { refresh, setRefresh } = React.useContext(Context);
     const closeModal = () => {
         const modal = document.getElementById('my_modal_3');
         modal.close();
@@ -24,7 +22,7 @@ export default function FormModal() {
         const storedData = JSON.parse(localStorage?.getItem('propertyData')) || [];
         storedData.push(formData);
         localStorage.setItem('propertyData', JSON.stringify(storedData));
-        router.refresh();
+        setRefresh(!refresh)
         closeModal();
     }
 
@@ -79,16 +77,16 @@ export default function FormModal() {
                         {/* type and status taker selector */}
                         <div className="grid md:grid-cols-2 md:gap-6">
                             <div className="relative z-0 w-full mb-5 group">
-                                <select required name="type" className="select select-bordered select-md w-full max-w-xs focus:outline-none focus:border focus:ring-0">
-                                    <option disabled selected>Type</option>
+                                <select defaultValue={'Type'} required name="type" className="select select-bordered select-md w-full max-w-xs focus:outline-none focus:border focus:ring-0">
+                                    <option disabled >Type</option>
                                     <option>Commercial</option>
                                     <option>Apartment</option>
                                     <option>House</option>
                                 </select>
                             </div>
                             <div className="relative z-0 w-full mb-5 group">
-                                <select required name='status' className="select select-bordered select-md w-full max-w-xs focus:outline-none focus:border focus:ring-0">
-                                    <option disabled selected>Status</option>
+                                <select defaultValue={'Status'} required name='status' className="select select-bordered select-md w-full max-w-xs focus:outline-none focus:border focus:ring-0">
+                                    <option disabled>Status</option>
                                     <option>Available</option>
                                     <option>Rented</option>
                                 </select>

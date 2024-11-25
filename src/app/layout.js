@@ -4,6 +4,8 @@ import Provider from "./Components/Provider/Provider";
 import Main from "./Components/Main";
 import DashboardSideBar from "./Components/Dashboard/DashboardSideBar";
 import DashboardNavbar from "./Components/Dashboard/DashboardNavbar";
+import { ThemeProvider } from "next-themes";
+import Footer from "./Components/Footer/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,16 +26,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F3F2ED66`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F3F2ED66 overflow-x-hidden`}>
         <Provider>
-
-          <div className="flex items-start">
-            <DashboardSideBar />
-            <DashboardNavbar />
-          </div>
-
-          <Main displayContent={children} />
-
+          <ThemeProvider attribute="class">
+            <div className="flex items-start">
+              <DashboardSideBar />
+              <DashboardNavbar />
+            </div>
+            <Main displayContent={children} />
+            <Footer />
+          </ThemeProvider>
         </Provider>
       </body>
     </html>
