@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <div className="space-y-6">
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <div className="flex flex-col xl:flex-row gap-6">
 
         {/* summery cards */}
-        <div className="md:w-[60%] grid md:grid-cols-2 gap-4">
+        <div className="xl:w-[60%] grid md:grid-cols-2 gap-4">
 
           <SummaryCard title={'Total Properties'} number={550} percent={70} color={'bg-[#F9D9DACC]'} progressColor={'text-[#fcbdbf]'} />
           <SummaryCard title={'Available Properties'} number={500} percent={80} color={'bg-[#82E4C8CC]'} progressColor={'text-[#6cffd5CC]'} />
@@ -20,7 +20,7 @@ export default function Home() {
 
         </div>
 
-        <div className="md:w-[40%]">
+        <div className="xl:w-[40%]">
           <div className="text-center bg-[#F2F6F9] dark:bg-[#181024] p-2 rounded-t-md border">
             <h3 className="text-lg font-bold dark:text-white">Rent Status</h3>
           </div>
@@ -43,15 +43,15 @@ export default function Home() {
 
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <div className="flex flex-col xl:flex-row gap-6">
 
         {/* Properties table data */}
-        <div className="md:w-[60%]">
+        <div className="xl:w-[60%]">
           <PropertyData />
         </div>
 
         {/* Chart */}
-        <div className="md:w-[40%]">
+        <div className="xl:w-[40%]">
           <div className="text-center bg-[#F2F6F9] dark:bg-[#181024] dark:text-white p-2 rounded-t-md border">
             <h3 className="text-lg font-bold">Property Status</h3>
           </div>
