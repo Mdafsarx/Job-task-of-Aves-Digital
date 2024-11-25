@@ -1,4 +1,4 @@
-# JIRA (Dashboard design)
+# EffortEdge 
 ## Live Site
 - live site [here](https://jira01.vercel.app)
 
