@@ -30,13 +30,13 @@ export default function PropertyData() {
             <div className="flex items-center justify-between flex-col flex-wrap md:flex-row pb-4 gap-3 md:gap-0">
                 {/* filter */}
                 <div className="flex flex-col md:flex-row items-center gap-3">
-                    <select defaultValue={'Type'} onChange={handleType} className="select select-bordered select-sm w-full max-w-xs focus:outline-none focus:border focus:ring-0">
+                    <select defaultValue={'Type'} onChange={handleType} className="select dark:bg-[#0062FFCC] dark:text-white select-bordered select-sm w-full max-w-xs focus:outline-none focus:border focus:ring-0">
                         <option disabled >Type</option>
                         <option>Commercial</option>
                         <option>Apartment</option>
                         <option>House</option>
                     </select>
-                    <select defaultValue={'Status'} onChange={handleStatus} className="select select-bordered select-sm w-full max-w-xs focus:outline-none focus:border focus:ring-0">
+                    <select defaultValue={'Status'} onChange={handleStatus} className="select dark:bg-[#0062FFCC] dark:text-white select-bordered select-sm w-full max-w-xs focus:outline-none focus:border focus:ring-0">
                         <option disabled >Status</option>
                         <option>Available</option>
                         <option>Rented</option>
@@ -47,13 +47,13 @@ export default function PropertyData() {
                 <button onClick={
                     () => document.getElementById('my_modal_3').showModal()
                 }
-                className="btn btn-sm text-sm bg-[#0062FF4D] text-[#0062FF] border border-[#0062FF]">Add Properties</button>
+                    className="btn btn-sm text-sm bg-[#0062FF4D] text-[#0062FF] border border-[#0062FF]">Add Properties</button>
             </div>
             {/* property data */}
             <div className="max-h-72 overflow-y-auto">
-                <table className="w-full text-sm border">
+                <table className="w-full text-sm border dark:text-white">
 
-                    <thead className="text-xs uppercase bg-[#F2F6F9] ">
+                    <thead className="text-xs uppercase bg-[#F2F6F9] dark:bg-[#181024] ">
                         <tr>
                             <th className="px-6 py-3">Name</th>
                             <th className="px-6 py-3">Type</th>
@@ -66,7 +66,7 @@ export default function PropertyData() {
                     <tbody>
                         {/* Example user rows */}
                         {storedData?.map((P, i) => (
-                            <tr key={i} className="border-y md:border-t hover:bg-[#F2F6F999]">
+                            <tr key={i} className="border-y md:border-t hover:bg-[#F2F6F999] hover:dark:bg-[#18102499] ">
                                 <td className="pl-11 py-3.5">{P.name}</td>
                                 <td className="pl-11 py-3.5">{P.type}</td>
                                 <td className="pl-11 py-3.5">{P.price}</td>

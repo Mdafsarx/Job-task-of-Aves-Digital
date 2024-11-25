@@ -20,7 +20,7 @@ export default function DashboardNavbar() {
 
     return (
         <div className={`fixed top-0 z-50 ${sideBar ? 'w-full md:w-[calc(100vw-240px)] md:left-60' : 'w-full md:w-[calc(100vw-72px)] md:left-[72px]'}`}>
-            <nav className="w-full h-14 pl-5 pr-10 border-b flex items-center justify-between *:text-black bg-[#F2F6F9] md:bg-[#ffffffE6]">
+            <nav className="w-full h-14 pl-5 pr-5 md:pr-10 border-b flex items-center justify-between *:text-black dark:*:text-white bg-[#F2F6F9] md:bg-[#ffffffE6] dark:bg-[#010313]">
                 {
                     sideBar
                         ? <GoSidebarExpand className="text-2xl cursor-pointer hover:text-[#3DD598] hidden md:block" onClick={() => {

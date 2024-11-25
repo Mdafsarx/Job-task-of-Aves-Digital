@@ -24,20 +24,21 @@ export default function FormModal() {
         localStorage.setItem('propertyData', JSON.stringify(storedData));
         setRefresh(!refresh)
         closeModal();
+        e.target.reset()
     }
 
     return (
         <div>
             <dialog id="my_modal_3" className="modal z-10">
-                <div className="modal-box">
-                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={closeModal}>✕</button>
+                <div className="modal-box dark:bg-[#181024]">
+                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 dark:text-white" onClick={closeModal}>✕</button>
                     <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                         {/* property name */}
                         <div className="relative z-0 w-full mb-5 group">
                             <input
                                 name="name"
                                 type="text"
-                                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                className="block py-2.5 px-0 w-full text-sm text-gray-900 dark:text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 required
                             />
                             <label htmlFor="floating_email"
@@ -50,7 +51,7 @@ export default function FormModal() {
                             <input
                                 type="text"
                                 name="location"
-                                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                className="block py-2.5 px-0 w-full text-sm text-gray-900 dark:text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder=" "
                                 required
                             />
@@ -64,7 +65,7 @@ export default function FormModal() {
                             <input
                                 type="number"
                                 name="price"
-                                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                className="block py-2.5 px-0 w-full text-sm text-gray-900 dark:text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder=" "
                                 required
                             />
@@ -77,7 +78,7 @@ export default function FormModal() {
                         {/* type and status taker selector */}
                         <div className="grid md:grid-cols-2 md:gap-6">
                             <div className="relative z-0 w-full mb-5 group">
-                                <select defaultValue={'Type'} required name="type" className="select select-bordered select-md w-full max-w-xs focus:outline-none focus:border focus:ring-0">
+                                <select defaultValue={'Type'} required name="type" className="select dark:bg-[#181024] dark:text-white dark:border dark:border-white select-bordered select-md w-full max-w-xs focus:outline-none focus:border focus:ring-0">
                                     <option disabled >Type</option>
                                     <option>Commercial</option>
                                     <option>Apartment</option>
@@ -85,7 +86,7 @@ export default function FormModal() {
                                 </select>
                             </div>
                             <div className="relative z-0 w-full mb-5 group">
-                                <select defaultValue={'Status'} required name='status' className="select select-bordered select-md w-full max-w-xs focus:outline-none focus:border focus:ring-0">
+                                <select defaultValue={'Status'} required name='status' className="select dark:bg-[#181024] dark:text-white dark:border dark:border-white select-bordered select-md w-full max-w-xs focus:outline-none focus:border focus:ring-0">
                                     <option disabled>Status</option>
                                     <option>Available</option>
                                     <option>Rented</option>
@@ -94,11 +95,11 @@ export default function FormModal() {
                         </div>
                         {/* Date picker */}
                         <div className="w-full">
-                            <input type="date" name="date" className="input input-bordered w-full max-w-full" required />
+                            <input type="date" name="date" className="input input-bordered w-full max-w-full dark:bg-[#181024] dark:text-white dark:border dark:border-white" required />
                         </div>
                         {/* submit button */}
                         <div className="flex justify-end mt-5">
-                            <button type="submit" className="bg-[#3DD598] btn text-white hover:bg-[#3DD598] hover:text-black">
+                            <button type="submit" className="bg-[#3DD598] btn text-white dark:text-black border-0 hover:bg-[#3DD598] hover:text-black">
                                 Add
                             </button>
                         </div>

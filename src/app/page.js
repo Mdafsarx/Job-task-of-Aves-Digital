@@ -5,7 +5,6 @@ import PropertyData from "./Components/Dashboard/PropertyData";
 export default function Home() {
 
 
-
   return (
     <div className="space-y-6">
 
@@ -17,17 +16,16 @@ export default function Home() {
           <SummaryCard title={'Total Properties'} number={550} percent={70} color={'bg-[#F9D9DACC]'} progressColor={'text-[#fcbdbf]'} />
           <SummaryCard title={'Available Properties'} number={500} percent={80} color={'bg-[#82E4C8CC]'} progressColor={'text-[#6cffd5CC]'} />
           <SummaryCard title={'Rented Properties'} number={50} percent={40} color={'bg-[#FFEDCDCC]'} progressColor={'text-[#ffdca0]'} />
-          <SummaryCard title={'Top Properties'} number={50} percent={40} color={'bg-[#D8DBECCC]'} progressColor={'text-[#bfc9ff]'} />
+          <SummaryCard title={'Top Properties'} number={400} percent={85} color={'bg-[#D8DBECCC]'} progressColor={'text-[#bfc9ff]'} />
 
         </div>
 
         <div className="md:w-[40%]">
-          <div className="text-center bg-[#F2F6F9] p-2 rounded-t-md border">
-            <h3 className="text-lg font-bold">Rent Status</h3>
+          <div className="text-center bg-[#F2F6F9] dark:bg-[#181024] p-2 rounded-t-md border">
+            <h3 className="text-lg font-bold dark:text-white">Rent Status</h3>
           </div>
           <div className="border border-t-0 rounded-b-md h-60 flex items-center justify-center">
             <PieChart
-              className=""
               series={[
                 {
                   data: [
@@ -54,7 +52,7 @@ export default function Home() {
 
         {/* Chart */}
         <div className="md:w-[40%]">
-          <div className="text-center bg-[#F2F6F9] p-2 rounded-t-md border">
+          <div className="text-center bg-[#F2F6F9] dark:bg-[#181024] dark:text-white p-2 rounded-t-md border">
             <h3 className="text-lg font-bold">Property Status</h3>
           </div>
           <div className="border border-t-0 rounded-b-md h-[17.95rem] flex items-center justify-center">

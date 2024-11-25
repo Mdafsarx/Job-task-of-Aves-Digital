@@ -12,10 +12,12 @@ import Link from 'next/link';
 import { FaHouseDamage } from 'react-icons/fa';
 import { usePathname } from 'next/navigation';
 import { CiSettings } from 'react-icons/ci';
+import { useTheme } from 'next-themes';
 
 
 export default function DashboardDrawer() {
     const [open, setOpen] = React.useState(false);
+    const theme = useTheme()
 
     const toggleDrawer = (newOpen) => () => {
         setOpen(newOpen);
@@ -23,9 +25,9 @@ export default function DashboardDrawer() {
     const route = usePathname()
 
     const DrawerList = (
-        <Box sx={{ width: 250 , backgroundColor:'#F2F6F9' ,height:'100%'}} role="presentation" onClick={toggleDrawer(false)}>
+        <Box sx={{ width: 250, backgroundColor: theme.theme === 'dark' ? '#010313' : '#F2F6F9', height: '100%' }} role="presentation" onClick={toggleDrawer(false)}>
 
-            <div>
+            <div className='dark:text-white'>
                 {/* logo */}
                 <h3 className='font-medium h-14 flex items-center justify-start font-nunito gap-x-3 pl-3'>
                     <FaHouseDamage className="text-3xl text-[#0062FF]" /><span className="text-xl -mb-1">EffortEdge</span>
@@ -33,7 +35,7 @@ export default function DashboardDrawer() {
 
                 {/* pages */}
                 <div className={`p-5 pl-3 pr-3 space-y-3`}>
-                    <Link href={'/'} className={`flex items-center gap-x-2 text-lg p-1 pl-1 ${route === '/' && 'bg-gradient-to-r from-[#3DD59866] via-[#0062FF66] to-[#0062FFCC] hover:scale-105 hover:duration-300 shadow-sm rounded-md'} `}><LuLayoutDashboard />
+                    <Link href={'/'} className={`flex items-center gap-x-2 text-lg p-1 pl-1 ${route === '/' && 'bg-gradient-to-r from-[#3DD59866] dark:from-[#3DD59899] via-[#0062FF66] dark:via-[#0062FF99] to-[#0062FFCC] dark:to-[#0062FF] hover:scale-105 hover:duration-300 shadow-sm rounded-md'} `}><LuLayoutDashboard />
                         Dashboard</Link>
                     <Link href={''} className={`flex items-center gap-x-2 text-lg p-1 pl-1`}><LuTableProperties />Properties</Link>
                     <Link href={''} className={`flex items-center gap-x-2 text-lg p-1 pl-1`}><BiMessageSquareDetail />Message</Link>
@@ -49,7 +51,7 @@ export default function DashboardDrawer() {
 
     return (
         <div>
-            <button onClick={toggleDrawer(true)} className='block md:hidden'> <FiSidebar className="text-2xl text-black cursor-pointer hover:text-[#3DD598] " /></button>
+            <button onClick={toggleDrawer(true)} className='block md:hidden'> <FiSidebar className="text-2xl text-black dark:text-white cursor-pointer hover:text-[#3DD598] " /></button>
             <Drawer open={open} onClose={toggleDrawer(false)}>
                 {DrawerList}
             </Drawer>

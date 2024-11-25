@@ -26,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F3F2ED66 overflow-x-hidden`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-[#010313] overflow-x-hidden`}>
         <Provider>
           <ThemeProvider attribute="class">
             <div className="flex items-start">

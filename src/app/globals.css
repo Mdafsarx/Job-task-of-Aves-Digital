@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.dark {
-  --bg-color: #000;
-  --text-color: #fff;
-}
-
-.light {
-  --bg-color: #fff;
-  --text-color: #000000;
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
 }

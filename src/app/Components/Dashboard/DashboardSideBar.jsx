@@ -21,7 +21,7 @@ export default function DashboardSideBar() {
 
     return (
        <div className='fixed top-0 left-0'>
-         <div className={`${sideBar ? 'w-60' : ''}  bg-[#F2F6F9] min-h-screen border-r *:text-black hidden md:flex flex-col justify-between`}>
+         <div className={`${sideBar ? 'w-60' : ''}  bg-[#F2F6F9] dark:bg-[#181024] min-h-screen border-r *:text-black dark:*:text-white hidden md:flex flex-col justify-between`}>
         
              <div>
                  {/* logo */}
@@ -31,7 +31,7 @@ export default function DashboardSideBar() {
         
                  {/* pages */}
                  <div className={`p-[1.4rem] ${sideBar && 'pr-3'} space-y-3`}>
-                     <Link href={'/'} className={`flex items-center gap-x-2 text-lg p-1 ${sideBar && 'pl-2.5'} ${route === '/' && 'bg-gradient-to-r from-[#3DD59866] via-[#0062FF66] to-[#0062FFCC] hover:scale-105 hover:duration-300 shadow-sm rounded-md'} `}><LuLayoutDashboard />
+                     <Link href={'/'} className={`flex items-center gap-x-2 text-lg p-1 ${sideBar && 'pl-2.5'} ${route === '/' && 'bg-gradient-to-r from-[#3DD59866] dark:from-[#3DD59899] via-[#0062FF66] dark:via-[#0062FF99] to-[#0062FFCC] dark:to-[#0062FF] hover:scale-105 hover:duration-300 shadow-sm rounded-md'} `}><LuLayoutDashboard />
                          {sideBar && 'Dashboard'} </Link>
                      <Link href={'/'} className={`flex items-center gap-x-2 text-lg p-1 ${sideBar && 'pl-2.5'}`}><LuTableProperties />{sideBar && 'Properties'}</Link>
                      <Link href={'/'} className={`flex items-center gap-x-2 text-lg p-1 ${sideBar && 'pl-2.5'}`}><BiMessageSquareDetail />{sideBar && 'Message'}</Link>
@@ -43,7 +43,7 @@ export default function DashboardSideBar() {
         
              {/* pages */}
              <div className={`p-[1.4rem] ${sideBar && 'pr-3'} space-y-3`}>
-                 <p className="uppercase text-sm text-gray-600">{sideBar && 'others'}</p>
+                 <p className="uppercase text-sm text-gray-600 dark:text-gray-400">{sideBar && 'others'}</p>
                  <Link href={'/'} className={`flex items-center gap-x-2 text-lg p-1 ${sideBar && 'pl-2.5'}`}><CiSettings />{sideBar && 'Setting'}</Link>
                  <Link href={'/'} className={`flex items-center gap-x-2 text-lg p-1 ${sideBar && 'pl-2.5'}`}><MdHelpOutline />{sideBar && 'Help Center'}</Link>
              </div>
