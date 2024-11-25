@@ -31,6 +31,7 @@ export default function FormModal() {
         <div>
             <dialog id="my_modal_3" className="modal z-10">
                 <div className="modal-box dark:bg-[#181024]">
+                    {/* close button  */}
                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 dark:text-white" onClick={closeModal}>✕</button>
                     <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                         {/* property name */}

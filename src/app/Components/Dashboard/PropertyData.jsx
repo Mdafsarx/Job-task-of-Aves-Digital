@@ -51,7 +51,6 @@ export default function PropertyData() {
             </div>
             {/* property data */}
             <div className="max-h-72 overflow-y-auto">
-
                 {
                     !storedData?.length
                         ? <figure className="flex flex-col justify-center items-center">
@@ -87,7 +86,7 @@ export default function PropertyData() {
                         </table>
                 }
             </div>
-
+            {/* modal for take input data */}
             <FormModal />
         </div>
     )
